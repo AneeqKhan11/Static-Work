@@ -1,54 +1,17 @@
-// // import AsyncStorage from '@react-native-community/async-storage';
-// import React, { useState } from 'react';
-// import { Button, Text } from 'react-native';
-
-
-// const Example = () => {
-//   const [username, setUsername] = useState('');
-
-//   const storeData = async () => {
-//     try {
-//       await AsyncStorage.setItem('TASKS','Aneeq Ahmash Khan',);
-//     } catch (error) {
-//       console.log("🚀 ~ file: App.js:16 ~ storeData ~ error", error)
-//       // Error saving data
-//     }
-//   };
-
-//   const retrieveData = async () => {
-//     try {
-//       const value = await AsyncStorage.getItem('TASKS');
-//       if (value !== null) {
-//         setUsername(value)
-//       }
-//     } catch (error) {
-//       console.log("🚀 ~ file: App.js:30 ~ retrieveData ~ error", error)
-//       // Error retrieving data
-//     }
-//   };
-
-//   return (
-//     <>
-//       <Button title='Store Data' onPress={()=>storeData()}/>
-//       <Button title="Retrieve Data"onPress={()=>retrieveData()}/>
-//       <Text>{username}</Text>
-//     </>
-//   );
-// };
-
-// export default Example;
-
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { NativeBaseProvider } from "native-base";
+import { store, persistor } from './src/redux/Store';
+import { Provider } from 'react-redux';
+import Router from './src/navigation/Router/index';
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    <Provider store={store}>
+      <NativeBaseProvider>
+        <Router />
+      </NativeBaseProvider>
+    </Provider>
   )
 }
 
-export default App
-
-const styles = StyleSheet.create({})
+export default App;

@@ -41,10 +41,10 @@ function MyDrawer() {
           swipeEnabled:false
         }}
         options={{
-          swipeEnabled: true,
+          swipeEnabled: false,
         }}
         name="Screen1"
-        component={true ?  AuthStack  : AppStack }
+        component={false ?  AuthStack  : AppStack }
       />
     </Drawer.Navigator>
   );
