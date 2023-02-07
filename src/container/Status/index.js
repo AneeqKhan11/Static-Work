@@ -1,6 +1,7 @@
-import { StyleSheet, Text, View, ScrollView,TouchableOpacity,Image } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import { profile1 } from '../../assets'
+import { Button } from '../../component'
 
 const Status = () => {
     const StatusData = [
@@ -183,14 +184,20 @@ const Status = () => {
 
     ]
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1 , paddingTop:10}}>
             <ScrollView>
                 <View style={styles.YourStatus}>
-                    <View style={styles.MyStatusBox}></View>
+                    <TouchableOpacity style={styles.MyStatusBox}>
+                        <View style={styles.Status_Profile}></View>
+                        <View style={styles.Status_MyStatus}>
+                            <View style={styles.my_ststus_icon}></View>
+                        </View>
+                    </TouchableOpacity>
                     <View style={styles.RecentUpdateText}>
-                    <Text>Recent Updates</Text>
+                        <Text style={{fontSize:16}}>Recent Updates</Text>
                     </View>
                 </View>
+                <View style={styles.Other_status}>
                 {StatusData.map((id, item) => {
                     return (
                         <View key={id} style={styles.ChatList}>
@@ -211,7 +218,10 @@ const Status = () => {
                     )
                 })
                 }
+                </View>
             </ScrollView>
+            <Button Button={styles.uplode_TypeButton}/>
+            <Button Button={styles.uplode_PicButton}/>
         </View>
     )
 }
@@ -219,10 +229,67 @@ const Status = () => {
 export default Status
 
 const styles = StyleSheet.create({
-    
-    RecentUpdateText:{
-        backgroundColor:'white',
-        paddingLeft:10
+    my_ststus_icon:{
+        flex:1,
+        width:40,
+        boederWidth:1,
+        borderColor:'black'
+    },
+    uplode_PicButton:{
+        borderRadius:100,
+        height:60,
+        width:60,
+        justifyContent:'center',
+        alignItems:'center',
+        position:'absolute',
+        bottom:0,
+        right:0,
+        margin:30
+    },
+    uplode_TypeButton:{
+        borderRadius:100,
+        height:50,
+        width:50,
+        justifyContent:'center',
+        alignItems:'center',
+        position:'absolute',
+        bottom:80,
+        right:0,
+        margin:35,
+        marginBottom:20,
+        backgroundColor:"#E9EDF0"
+        
+    },
+    Other_status:{
+        marginTop:20
+    },
+    Status_MyStatus:{
+        height:70,
+        flex:1,
+        borderWidth:1,
+        borderColor:'black',
+        justifyContent:'flex-end',
+        alignItems:'flex-end',
+    },
+    Status_Profile:{
+        borderWidth:1,
+        borderColor:'black',
+        height:70,
+        width:70,
+        borderRadius:100,
+
+    },
+
+    MyStatusBox: {
+        flex: 1,
+        flexDirection:'row',
+        paddingHorizontal: 10,
+        alignItems:'center',
+        marginBottom:10
+
+    },
+    RecentUpdateText: {
+        paddingHorizontal:10
     },
     Opecity: {
         flexDirection: 'row'
@@ -251,7 +318,8 @@ const styles = StyleSheet.create({
         height: 85,
         flexDirection: 'row',
         alignItems: 'center',
-        padding: 10
+        padding: 10,
+        // marginTop:20
     },
     Main_ChatDiv: {
         flex: 1,
@@ -259,7 +327,7 @@ const styles = StyleSheet.create({
     },
 
     YourStatus: {
-        height: 100,
-        backgroundColor: 'pink'
+        height: 110,
+        position:'relative'
     }
 })
