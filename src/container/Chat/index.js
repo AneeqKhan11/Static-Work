@@ -2,188 +2,90 @@ import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { ScrollView } from 'native-base'
-import  profile1  from '../../assets'
+import  {Profile1}  from '../../assets'
 import { Button } from '../../component'
 
 const Chat = () => {
     const ChatsData = [
         {
             id: 1,
-            ProfileImg:profile1,
             SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
+            SendOrReciveTime: '12:01 AM',
+            Massege:"Kaha ho"
         },
         {
             id: 2,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
+            SenderName: "Hashir",
+            SendOrReciveTime: '12:01 AM',
+            Massege:"Kaha ho"
         },
         {
             id: 3,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
+            SenderName: "navid",
+            SendOrReciveTime: '12:01 AM',
+            Massege:"Kaha ho"
         },
         {
             id: 4,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
+            SenderName: "Samina",
+            SendOrReciveTime: '12:01 AM',
+            Massege:"Kaha ho"
         },
         {
             id: 5,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
+            SenderName: "rubina",
+            SendOrReciveTime: '12:01 AM',
+            Massege:"Kaha ho"
         },
         {
             id: 6,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
+            SenderName: "farzana",
+            SendOrReciveTime: '12:01 AM',
+            Massege:"Kaha ho"
         },
         {
             id: 7,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
+            SenderName: "Khalid",
+            SendOrReciveTime: '12:01 AM',
+            Massege:"Kaha ho"
         },
         {
             id: 8,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
+            SenderName: "Shahid",
+            SendOrReciveTime: '12:01 AM',
+            Massege:"Kaha ho"
         },
         {
             id: 9,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
+            SenderName: "Rahim",
+            SendOrReciveTime: '12:01 AM',
+            Massege:"Kaha ho"
         },
         {
             id: 10,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
+            SenderName: "shakoor",
+            SendOrReciveTime: '12:01 AM',
+            Massege:"Kaha ho"
         },
         {
             id: 11,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
+            SenderName: "Mashkoor",
+            SendOrReciveTime: '12:01 AM',
+            Massege:"Kaha ho"
         },
         {
             id: 12,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
+            SenderName: "Mannan",
+            SendOrReciveTime: '12:01 AM',
+            Massege:"Kaha ho"
         },
         {
             id: 13,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
+            SenderName: "Boss",
+            SendOrReciveTime: '12:01 AM',
+            Massege:"Kaha ho"
         },
-        {
-            id: 14,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
-        },
-        {
-            id: 15,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
-        },
-        {
-            id: 16,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
-        },
-        {
-            id: 17,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
-        },
-        {
-            id: 18,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
-        },
-        {
-            id: 19,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
-        },
-        {
-            id: 20,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
-        },
-        {
-            id: 21,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
-        },
-        {
-            id: 22,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
-        },
-        {
-            id: 23,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
-        },
-        {
-            id: 24,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
-        },
-        {
-            id: 25,
-            ProfileImg:profile1,
-            SenderName: "Altamash",
-            Massege: "Kha ho",
-            SendOrReciveTime: '12:01 AM'
-        },
-
-
+        
     ]
 
     return (
@@ -194,7 +96,7 @@ const Chat = () => {
                         <View key={id} style={styles.ChatList}>
                             <TouchableOpacity style={styles.Opecity}>
                                 <View style={styles.ChatProfile}>
-                                    <Image style={{height:"100%", width:'100%'}} source={item.ProfileImg} />
+                                    <Image style={{height:70 , width:70}} source={Profile1} />
                                 </View>
                                 <View style={styles.Id_And_Notification}>
                                     <Text style={styles.SenderName_Style}>
@@ -206,7 +108,7 @@ const Chat = () => {
                                 </View>
                                 <View style={styles.Time_And_Notification}>
      
-                                    <Text style={{fontSize:10, marginBottom:15}}>
+                                    <Text style={{fontSize:12, marginBottom:15 ,textAlign:'center'}}>
                                         {item.SendOrReciveTime}
                                     </Text>
                                 </View>
@@ -216,7 +118,7 @@ const Chat = () => {
                 })
                 }
             </ScrollView>
-            <Button Button={styles.button} title='+' />
+            <Button Button={styles.button} name='android-messages' type='material-community' size={30}  color={'white'}/>
         </View>
     )
 }
@@ -247,8 +149,6 @@ const styles = StyleSheet.create({
     Time_And_Notification: {
         height: 70,
         width: 50,
-        borderWidth: 1,
-        borderColor: "black",
         justifyContent:'center',
         alignItems:'center',
         textAlign:'center',
@@ -257,19 +157,16 @@ const styles = StyleSheet.create({
     Id_And_Notification: {
         height: 70,
         width: 220,
-        borderWidth: 1,
-        borderColor: "black",
-        paddingHorizontal:10,
+        paddingHorizontal:15,
         justifyContent:'center'
         
     },
 
     ChatProfile: {
-        borderWidth: 1,
-        borderColor: "black",
         borderRadius: 100,
         height: 70,
-        width: 70
+        width: 70,
+        overflow:'hidden'
     },
     ChatList: {
         height: 85,
